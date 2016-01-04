@@ -10,7 +10,7 @@ The `forceFeed.js` script is designed to help you test your design's tolerance f
 
 First include the script after the page content and before the closing `body` tag:
 
-```
+```HTML
   <script src="path/to/forceFeed.js"></script>
 </body>
 ```
@@ -19,7 +19,7 @@ First include the script after the page content and before the closing `body` ta
 
 `forceFeed.js` uses a special attribute, `data-forcefeed`, to feed randomized content into individual elements. Consider the following example:
 
-```
+```HTML
 <div class="person">
   <h3 class="name" data-forcefeed="words|2"></h3>
   <p class="description" data-forcefeed="sentences|3|6">This will be overriden</p>
@@ -33,7 +33,7 @@ Of course, for the above to work, you need to execute the script, providing an o
 
 Here are my arrays:
 
-```
+```javascript
 window.words = ['lorem', 'ipsum', 'dolor', 'sit', 'amet', 'adipsing', 'consectetur', 'elit', 'sed', 'commodo', 'eu', 'ligula', 'vitae', 'mollis'];
 
 window.sentences = ['Curabitur tempus lobortis faucibus.', 'Nulla sed consequat libero.', 'Phasellus bibendum neque eros, vel malesuada ligula fermentum et.', 'Vivamus pretium vulputate imperdiet.', 'Morbi eleifend urna ac purus auctor, non porttitor massa semper.', 'Ut tempor ante et mauris sagittis, sed vestibulum urna rhoncus.', 'Mauris quis augue fermentum, auctor metus quis, imperdiet lectus.', 'Morbi nec rhoncus lectus.',  'Nulla cursus venenatis urna maximus bibendum.', 'Cras at ornare tortor.', 'Nulla nulla justo, posuere id ultricies non, feugiat et nisi.', 'Duis porttitor aliquet viverra.', 'Integer vehicula fringilla velit, at iaculis dolor imperdiet vel.'];
@@ -41,13 +41,13 @@ window.sentences = ['Curabitur tempus lobortis faucibus.', 'Nulla sed consequat 
 
 And here's how I execute the script:
 
-```
+```javascript
 forceFeed({words: window.words, sentences: window.sentences});
 ```
 
 **Note:** If an array is not defined or an unrecognized array name is used as a parameter, the script will throw an error and cease execution:
 
-```
+```javascript
 if (!buffet) {
   throw new Error('A forceFeed.js parameter, ' + split[0] + ', for the element ' + el.outerHTML + ' is not recognized.');
 }
@@ -63,7 +63,7 @@ So, load up the script and keep hitting COMMAND + R (or CTRL + F5), adjusting th
 
 In the previous example, I hand coded some arrays using lorem ipsum text. But, if the page already has static content, why not use that? In the following recipe, I take all words from paragraphs on the page to reuse in `forceFeed.js`:
 
-```
+```javascript
 // get all the paragraph elements as an array
 window.paragraphs = [].slice.call(document.querySelectorAll('p'));
 
