@@ -61,7 +61,7 @@ So, load up the script and keep hitting COMMAND + R (or CTRL + F5), adjusting th
 
 ## FUCK LOREM, LET'S CANNIBALIZE!
 
-In the previous example, I hand coded some arrays using lorem ipsum text. But, if the page already has static content, why not use that. In the following recipe, I take all words from paragraphs on the page to reuse in `forceFeed.js`:
+In the previous example, I hand coded some arrays using lorem ipsum text. But, if the page already has static content, why not use that? In the following recipe, I take all words from paragraphs on the page to reuse in `forceFeed.js`:
 
 ```
 // get all the paragraph elements as an array
