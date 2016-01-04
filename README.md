@@ -1,6 +1,8 @@
 # forceFeed.js
 
-Designed to help you test your design's tolerance for variable, dynamic content. A tiny script that "force feeds" HTML elements with random text content within specified parameters. Set up, keep refreshing your browser until something breaks, then fix the design.
+**Static mockups are liars. They only show optimal content.**
+
+The `forceFeed.js` script is designed to help you test your design's tolerance for variable, dynamic content. A tiny script that "force feeds" HTML elements with random text content within specified parameters. Set up, keep refreshing your browser until something breaks, then fix the design.
 
 ## Get started
 
@@ -56,3 +58,41 @@ if (!buffet) {
 The notion that inspired `forceFeed.js` is that static mockups don't tell the whole story: Content will vary in length and quantity as a design is put to use. You need to test the design's tolerance for dynamic content!
 
 So, load up the script and keep hitting COMMAND + R (or CTRL + F5), adjusting the design each time you need to until it's nice and robust.
+
+## FUCK LOREM, LET'S CANNIBALIZE!
+
+In the previous example, I hand coded some arrays using lorem ipsum text. But, if the page already has static content, why not use that. In the following recipe, I take all words from paragraphs on the page to reuse in `forceFeed.js`:
+
+```
+// get all the paragraph elements as an array
+window.paragraphs = [].slice.call(document.querySelectorAll('p'));
+
+// init allWords array
+window.allWords = [];
+
+// iterate over paragraphs
+paragraphs.forEach(function(paragraph) { 
+  
+  // remove punctuation
+  var paragraphContent = paragraph.textContent
+                        .replace(/[^\w\s]|_/g, "")
+                        .replace(/\s+/g, " ");
+  
+  // make into an array
+  var wordsArray = paragraphContent.split(' ');
+  
+  // remove bogus, empty last item
+  wordsArray.pop();
+  
+  // push each word to our array
+  wordsArray.forEach(function(word) {
+    allWords.push(word);
+  });
+  
+});
+
+forceFeed({words: allWords});
+
+```
+
+In this implementation, the randomized, force fed content is made up of the original content. This is somewhat of an improvement because it uses the language of the page, not Latin dummy text.
