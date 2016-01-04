@@ -1,6 +1,6 @@
 # forceFeed.js
 
-**Static mockups are liars. They only show optimal content.**
+**Static mockups are liars. They only show the designer's content.**
 
 The `forceFeed.js` script is designed to help you test your design's tolerance for variable, dynamic content. A tiny script that "force feeds" HTML elements with random text content within specified parameters. Set up, keep refreshing your browser until something breaks, then fix the design.
 
