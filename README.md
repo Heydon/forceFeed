@@ -22,7 +22,7 @@ First include the script after the page content and before the closing `body` ta
 ```HTML
 <div class="person">
   <h3 class="name" data-forcefeed="words|2"></h3>
-  <p class="description" data-forcefeed="sentences|3|6">This will be overriden</p>
+  <p class="description" data-forcefeed="sentences|3|6">This will be overridden</p>
 </div>
 ```
 Here, I have created a dummy person/bio module. Note the "parameters" of the `data-forcefeed` attribute: The first refers to a named array of content from which the random content is sampled. The second and third parameters determine what quantity of content should be sampled. If only one parameter is provided, exactly this many items from the array is included. So, in `data-forcefeed="words|2"`, two random words from a "words" array will be provided. If two numbers are present, as in `data-forcefeed="sentences|3|6`, _between_ 3 and 6 items ("sentences") will make up that sample.
