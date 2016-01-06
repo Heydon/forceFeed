@@ -1,0 +1,25 @@
+{
+  "name": "forcefeed",
+  "version": "1.0.0",
+  "description": "The forceFeed.js script is designed to help you test your design's tolerance for variable, dynamic content. A tiny script that \"force feeds\" HTML elements with random text content within specified parameters. Set up, keep refreshing your browser until something breaks",
+  "main": "forceFeed.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Heydon/forceFeed.git"
+  },
+  "keywords": [
+    "design",
+    "tolerance",
+    "dynamic",
+    "content"
+  ],
+  "author": "Heydon Pickering <heydon@heydonworks.com>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/Heydon/forceFeed/issues"
+  },
+  "homepage": "https://github.com/Heydon/forceFeed"
+}

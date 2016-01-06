@@ -6,6 +6,10 @@ The `forceFeed.js` script is designed to help you test your design's tolerance f
 
 ## Get started
 
+### Installation
+
+ForceFeed is available via `npm install forcefeed` or `bower install forcefeed`
+
 ### Include the script
 
 First include the script after the page content and before the closing `body` tag:
@@ -96,3 +100,7 @@ forceFeed({words: allWords});
 ```
 
 In this implementation, the randomized, force fed content is made up of the original content. This is somewhat of an improvement because it uses the language of the page, not Latin dummy text.
+
+# License
+
+[WTFPL](http://sam.zoy.org/wtfpl/)
