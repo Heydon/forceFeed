@@ -6,6 +6,10 @@ The `forceFeed.js` script is designed to help you test your design's tolerance f
 
 ## Get started
 
+### Installation
+
+ForceFeed is available via `npm install forcefeed` or `bower install forcefeed`
+
 ### Include the script
 
 First include the script after the page content and before the closing `body` tag:
