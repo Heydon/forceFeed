@@ -1,5 +1,5 @@
 /*
-* forceFeed.js v 1.0
+* forceFeed.js
 * author: Heydon Pickering (http://www.heydonworks.com)
 * Released under the WTFPL license (http://sam.zoy.org/wtfpl/)
 */
