@@ -93,6 +93,9 @@
 
       }
 
+      // Uppercase first letter of first word
+      sample[0] = sample[0].charAt(0).toUpperCase() + sample[0].slice(1);
+
       // Stringify the sample
       food = sample.join(' ');
 
